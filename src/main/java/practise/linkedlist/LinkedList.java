@@ -22,7 +22,34 @@ public class LinkedList {
     }
 
     public void addFirst(LinkedList list, int data){
+        Node newNode = new Node(data);
+        if(list.head == null){
+            list.head = newNode;
+            size++;
+            System.out.println("added"+data);
+        }else{
+            Node first = list.head;
+            newNode.next = first;
+            list.head = newNode;
+            size++;
+            System.out.println("added"+data);
+        }
+    }
 
+    public int getAt(int index) throws ElementNotFoundException {
+        Node desired = this.head;
+        if(index == 0) return desired.data;
+        else {
+            int count = 0;
+            while(count<=index && desired.next != null){
+                count++;
+                desired = desired.next;
+            }
+            if(count !=0 && count == index) {
+                return desired.data;
+            }
+        }
+        throw  new ElementNotFoundException();
     }
 
 
