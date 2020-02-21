@@ -23,14 +23,14 @@ public class LinkedList {
 
     public void addFirst(LinkedList list, int data){
         Node newNode = new Node(data);
-        if(list.head == null){
-            list.head = newNode;
+        if(this.head == null){
+            this.head = newNode;
             size++;
             System.out.println("added"+data);
         }else{
-            Node first = list.head;
+            Node first = this.head;
             newNode.next = first;
-            list.head = newNode;
+            this.head = newNode;
             size++;
             System.out.println("added"+data);
         }
@@ -41,7 +41,7 @@ public class LinkedList {
         if(index == 0) return desired.data;
         else {
             int count = 0;
-            while(count<=index && desired.next != null){
+            while(count<index && desired.next != null){
                 count++;
                 desired = desired.next;
             }
