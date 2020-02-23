@@ -6,8 +6,8 @@ public class LinkedListMain {
         lList.addLast(lList,1);
         lList.addLast(lList,2);
         lList.addLast(lList,3);
-        lList.addFirst(lList,10);
-        lList.addFirst(lList,20);
+        lList.addFirst(10);
+        lList.addFirst(20);
         try {
             System.out.println(lList.getAt(0));
         } catch (ElementNotFoundException e) {

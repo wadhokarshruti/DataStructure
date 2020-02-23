@@ -21,7 +21,7 @@ public class LinkedList {
         System.out.println("added"+newNode.data);
     }
 
-    public void addFirst(LinkedList list, int data){
+    public void addFirst(int data){
         Node newNode = new Node(data);
         if(this.head == null){
             this.head = newNode;
